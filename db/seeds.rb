@@ -25,5 +25,6 @@ CSV.foreach(filepath, csv_options) do |row|
   s.last_namer = row["Last Name"]
   company = Company.find_by(name: row["Company"])
   s.company_id = company.id
+  s.save!
   puts "#{s.first_name}, #{s.last_namer} at #{s.company.name} saved"
 end

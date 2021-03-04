@@ -1,0 +1,7 @@
+<h1>Comapnies</h1>
+
+<ul>
+  <% @companies.each do |company| %>
+    <li><%= link_to company.name, company_path(company) %> - <%= company.count_contacts %> </li>
+  <% end %>
+</ul>

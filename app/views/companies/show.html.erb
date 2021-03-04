@@ -1,0 +1,10 @@
+<h1><%= @company.name %> 
+<h2>
+  <%= pluralize @company.people.size, "Contact" %>
+</h2>
+
+<div id="contacts">
+    <% @company.people.each do |person| %>
+      <p><%= person.first_name %>, <%= person.last_namer %> </p>
+    <% end %>
+</div>
